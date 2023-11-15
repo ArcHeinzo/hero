@@ -4,7 +4,7 @@ rule-providers:
     behavior: domain
     url: "http://arc.lovestoblog.com/ads.txt"
     path: ./ads.yaml
-  WA:
+  W:
     type: file
     behavior: classical
     url: "http://arc.lovestoblog.com/whatsapp.yaml"
