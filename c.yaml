@@ -6,11 +6,11 @@ rule-providers:
     path: ./acfa.yaml
     interval: 1500
   Direct:
-    type: file
+    type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.yaml"
     path: "./direct.yaml"
-    interval: 1500
+    interval: 15
 proxy-providers:
   VPN:
     type: file
