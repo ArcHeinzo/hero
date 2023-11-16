@@ -50,7 +50,6 @@ proxy-groups:
   - LB1
   - LB2
   - Url
-  - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: 6
   tolerance: 30
