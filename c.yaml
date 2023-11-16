@@ -10,7 +10,7 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.txt"
     path: "./direct.yaml"
-    interval: 15
+    interval: 3600
 proxy-providers:
   VPN:
     type: file
@@ -28,28 +28,19 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 6
   tolerance: 30
-- name: LB1
+- name: LB
   type: load-balance
   strategy: round-robin
   disable-udp: false
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
-  interval: 300
-- name: LB2
-  type: load-balance
-  strategy: consistent-hashing
-  disable-udp: false
-  use:
-  - VPN
-  url: http://www.gstatic.com/generate_204
-  interval: 300
+  interval: 30
 - name: Internet
   type: url-test
   disable-udp: false
   proxies:
-  - LB1
-  - LB2
+  - LB
   - Url
   url: http://www.gstatic.com/generate_204
   interval: 6
