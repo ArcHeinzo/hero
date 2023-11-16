@@ -1,8 +1,8 @@
 rule-providers:
   X:
-    type: file
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/v.yaml"
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/v.txt"
     path: ./acfa.yaml
     interval: 30
   Direct:
