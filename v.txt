@@ -34,13 +34,13 @@ proxies:
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: b843a4b0-1825-4902-be04-42e53100c865
+  uuid: 10b16a45-b978-4b26-a5ea-1f57b6a8b938
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: do.madewgn.eu.org
+  servername: vmess-ovh-sg02.globalssh.xyz
   network: grpc
   grpc-opts:
-    grpc-service-name: vmess
+    grpc-service-name: vmess-grpc
   udp: true
