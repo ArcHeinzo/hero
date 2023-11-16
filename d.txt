@@ -1,3 +1,17 @@
 payload:
-  - DOMAIN-SUFFIX,adservice.google.com
-  - DOMAIN-SUFFIX,ads.google.com
+- "+.comments.app"
+- "+.contest.com"
+- "+.graph.org"
+- "+.quiz.directory"
+- "+.t.me"
+- "+.tdesktop.com"
+- "+.telega.one"
+- "+.telegra.ph"
+- "+.telegram.dog"
+- "+.telegram.me"
+- "+.telegram.org"
+- "+.telegram.space"
+- "+.telesco.pe"
+- "+.tg.dev"
+- "+.tx.me"
+- "+.usercontent.dev"
