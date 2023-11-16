@@ -8,7 +8,7 @@ rule-providers:
   Direct:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.yaml"
+    url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.txt"
     path: "./direct.yaml"
     interval: 15
 proxy-providers:
