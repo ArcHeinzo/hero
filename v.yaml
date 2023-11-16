@@ -29,3 +29,18 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
+  
+- name: Trial
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: b843a4b0-1825-4902-be04-42e53100c865
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: do.madewgn.eu.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess
+  udp: true
