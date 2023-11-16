@@ -1,0 +1,46 @@
+proxies:
+
+- name: Vmessb33qC
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: ddb00dad-f386-453a-8e92-afe2514544a8
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg2.sanvpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
+- name: Majiro
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 8908110d-dd68-4571-a4fd-4bd54f08b2f2
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-ctb-sg03.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+  
+- name: Trial
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: b843a4b0-1825-4902-be04-42e53100c865
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: do.madewgn.eu.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess
+  udp: true
