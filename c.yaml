@@ -1,15 +1,16 @@
 rule-providers:
   X:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/v.txt"
     path: ./acfa.yaml
-    interval: 30
+    interval: 1500
   Direct:
     type: file
     behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.yaml"
     path: "./direct.yaml"
+    interval: 1500
 proxy-providers:
   VPN:
     type: file
@@ -34,7 +35,7 @@ proxy-groups:
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
-  interval: 30
+  interval: 300
 - name: LB2
   type: load-balance
   strategy: consistent-hashing
@@ -42,7 +43,7 @@ proxy-groups:
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
-  interval: 30
+  interval: 300
 - name: Internet
   type: url-test
   disable-udp: false
