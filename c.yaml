@@ -10,7 +10,7 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.txt"
     path: "./direct.yaml"
-    interval: 300
+    interval: 86400
 proxy-providers:
   VPN:
     type: file
