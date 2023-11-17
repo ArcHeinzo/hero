@@ -29,3 +29,18 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
+
+- name: 100
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 1d1c1d94-6987-4658-a4dc-8821a30fe7e0
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: freedom.rzpserver.cloud
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
