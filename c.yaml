@@ -4,13 +4,13 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/v.txt"
     path: ./acfa.yaml
-    interval: 1500
+    interval: 300
   Direct:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.txt"
     path: "./direct.yaml"
-    interval: 3600
+    interval: 300
 proxy-providers:
   VPN:
     type: file
@@ -18,7 +18,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 300
 proxy-groups:
 - name: Url
   type: url-test
@@ -26,8 +26,8 @@ proxy-groups:
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
-  interval: 6
-  tolerance: 30
+  interval: 7
+  tolerance: 76
 - name: LB
   type: load-balance
   strategy: round-robin
@@ -35,7 +35,7 @@ proxy-groups:
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
-  interval: 30
+  interval: 77
 - name: Internet
   type: url-test
   disable-udp: false
@@ -44,7 +44,7 @@ proxy-groups:
   - Url
   url: http://www.gstatic.com/generate_204
   interval: 6
-  tolerance: 30
+  tolerance: 78
 port: 7890
 socks-port: 7891
 redir-port: 7892
