@@ -17,7 +17,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 7
 proxy-groups:
 - name: Url
   type: url-test
@@ -51,7 +51,8 @@ proxy-groups:
   - Url
   - LB2
   url: http://www.gstatic.com/generate_204
-  interval: 30
+  interval: 7
+  tolerance: 77
 port: 7890
 socks-port: 7891
 redir-port: 7892
