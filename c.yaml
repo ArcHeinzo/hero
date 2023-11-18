@@ -25,8 +25,7 @@ proxy-groups:
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
-  interval: 6
-  tolerance: 90
+  interval: 10
 - name: LB
   type: load-balance
   strategy: round-robin
@@ -51,8 +50,7 @@ proxy-groups:
   - Url
   - LB2
   url: https://clients3.google.com
-  interval: 7
-  tolerance: 77
+  interval: 30
 port: 7890
 socks-port: 7891
 redir-port: 7892
