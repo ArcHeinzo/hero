@@ -38,7 +38,7 @@ proxy-groups:
 - name: LB2
   type: load-balance
   strategy: consistent-hashing
-  disable-udp: false
+  disable-udp: true
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
@@ -50,7 +50,7 @@ proxy-groups:
   - LB
   - Url
   - LB2
-  url: http://www.gstatic.com/generate_204
+  url: https://clients3.google.com
   interval: 7
   tolerance: 77
 port: 7890
@@ -58,6 +58,9 @@ socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7895
+udpgw-port: 7299
+udp-gateway: 7299
+udp-port: 7299
 ipv6: true
 fingerprint: "Mozilla/5.0 (compatible; MSIE 11.0; Windows NT 6.2; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QIHU 360EE)"
 mode: rule
