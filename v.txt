@@ -29,3 +29,32 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
+
+- name: Majiro
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 8908110d-dd68-4571-a4fd-4bd54f08b2f2
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-ctb-sg03.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+- name: Trial
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 10b16a45-b978-4b26-a5ea-1f57b6a8b938
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-ovh-sg02.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
