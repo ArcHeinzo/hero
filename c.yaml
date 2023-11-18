@@ -50,7 +50,7 @@ proxy-groups:
   - LB
   - Url
   - LB2
-  url: https://clients3.google.com
+  url: http://www.gstatic.com/generate_204
   interval: 7
   tolerance: 77
 port: 7890
@@ -58,10 +58,7 @@ socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7895
-udpgw-port: 7300
-udp-gateway: 7300
-udp-port: 7300
-ipv6: false
+ipv6: true
 fingerprint: "Mozilla/5.0 (compatible; MSIE 11.0; Windows NT 6.2; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QIHU 360EE)"
 mode: rule
 log-level: silent
@@ -76,7 +73,7 @@ profile:
   store-fake-ip: true
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   use-host: true
   enhanced-mode: fake-ip
   listen: 0.0.0.0:7874
