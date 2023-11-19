@@ -44,16 +44,16 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: Trial
+- name: ZeroCBTuS
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: 10b16a45-b978-4b26-a5ea-1f57b6a8b938
+  uuid: f0cc6622-b07b-469b-9866-646a2418493b
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: vmess-ovh-sg02.globalssh.xyz
+  servername: us01.dnstt.in
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
