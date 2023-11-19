@@ -58,3 +58,18 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
+
+- name: MajiroSG3
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: faf7026e-e2c8-4ba0-ab52-5ca54516d329
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-ctb-sg03.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
