@@ -53,7 +53,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: us01.dnstt.in
+  servername: vmess-ctb-us01.globalssh.xyz
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
