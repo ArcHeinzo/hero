@@ -59,21 +59,6 @@ proxies:
     grpc-service-name: vmess-service
   udp: true
 
-- name: ZeroCBTuS
-  server: 104.18.225.52
-  type: vmess
-  port: 443
-  uuid: f0cc6622-b07b-469b-9866-646a2418493b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: vmess-ctb-us01.globalssh.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-  udp: true
-
 - name: MajiroSG3
   server: 104.18.225.52
   type: vmess
