@@ -1,14 +1,14 @@
 proxies:
-- name: sg4
+- name: ytz
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: ddb00dad-f386-453a-8e92-afe2514544a8
+  uuid: 778a7cb0-8c30-4753-be94-089fb0e0c331
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sg4.sanvpn.my.id
+  servername: ipu5h.yzt.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
