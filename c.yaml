@@ -1,7 +1,7 @@
 rule-providers:
   Ping-Url:
     type: http
-    behavior: domain
+    behavior: classical
     url: "https://clients3.google.com"
     path: ./ping.yaml
     interval: '1'
