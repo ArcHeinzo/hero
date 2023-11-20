@@ -43,7 +43,7 @@ proxy-groups:
 - name: LB2
   type: load-balance
   strategy: consistent-hashing
-  disable-udp: true
+  disable-udp: false
   use:
   - VPN
   url: https://cp.cloudflare.com/generate_204
