@@ -10,7 +10,7 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/v.txt"
     path: ./acfa.yaml
-    interval: '963'
+    interval: '3663'
   Direct:
     type: http
     behavior: classical
