@@ -1,14 +1,14 @@
 proxies:
-- name: ytz
+- name: zrp test
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: 778a7cb0-8c30-4753-be94-089fb0e0c331
+  uuid: 8f612d00-43df-4d39-9cf9-241b3deb7cf7
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: ipu5h.yzt.my.id
+  servername: biznet.rzpserver.cloud
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
