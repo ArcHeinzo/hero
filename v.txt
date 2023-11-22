@@ -59,6 +59,20 @@ proxies:
     grpc-service-name: vmess-grcp
   udp: true
 
+- name: Vmess-openorder-GRPC (SNI)
+  server: 104.18.225.52
+  port: 443
+  type: vmess
+  uuid: 84f5ed4b-9c56-4b42-88d0-5a984d6ff8cc
+  alterId: 0
+  cipher: auto
+  network: grpc
+  tls: true
+  servername: 5k30hari.baguno.my.id
+  skip-cert-verify: true
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
 - name: MajiroSG3
   server: 104.18.225.52
   type: vmess
