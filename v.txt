@@ -48,15 +48,15 @@ proxies:
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: 64c1428b-c754-4c60-993d-d16d19478c24
+  uuid: 1d1c1d94-6987-4658-a4dc-8821a30fe7e0
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: chi.rzpserver.cloud
+  servername: freedom.rzpserver.cloud
   network: grpc
   grpc-opts:
-    grpc-service-name: vmess-service
+    grpc-service-name: vmess-grcp
   udp: true
 
 - name: MajiroSG3
