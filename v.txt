@@ -1,19 +1,17 @@
 proxies:
-- name: sshkit
+- name: main
   server: 104.18.225.52
-  port: 443
   type: vmess
-  uuid: e620d600-ee19-4012-a96c-968e85a52de9
+  port: 443
+  uuid: daf3c347-bfef-40f7-b41c-913b1892eebb
   alterId: 0
   cipher: auto
-  network: ws
   tls: true
-  servername: vmess-sg1.sshkit.org
   skip-cert-verify: true
-  ws-opts:
-    path: /sshkit/2098621192/655febb58666d/
-    headers:
-      Host: vmess-sg1.sshkit.org
+  servername: sgm2grpc.serverip.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
   udp: true
 
 - name: Vmessb33qC
