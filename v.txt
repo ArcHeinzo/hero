@@ -1,19 +1,4 @@
 proxies:
-- name: main
-  server: 104.18.225.52
-  type: vmess
-  port: 443
-  uuid: daf3c347-bfef-40f7-b41c-913b1892eebb
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sgm2grpc.serverip.my.id
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  udp: true
-
 - name: Vmessb33qC
   server: 104.18.225.52
   type: vmess
