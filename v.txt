@@ -1,17 +1,19 @@
 proxies:
-- name: zrp test
+- name: sshkit
   server: 104.18.225.52
-  type: vmess
   port: 443
-  uuid: 8f612d00-43df-4d39-9cf9-241b3deb7cf7
+  type: vmess
+  uuid: e620d600-ee19-4012-a96c-968e85a52de9
   alterId: 0
   cipher: auto
+  network: ws
   tls: true
+  servername: vmess-sg1.sshkit.org
   skip-cert-verify: true
-  servername: biznet.rzpserver.cloud
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grpc
+  ws-opts:
+    path: /sshkit/2098621192/655febb58666d/
+    headers:
+      Host: vmess-sg1.sshkit.org
   udp: true
 
 - name: Vmessb33qC
@@ -48,30 +50,16 @@ proxies:
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: 1d1c1d94-6987-4658-a4dc-8821a30fe7e0
+  uuid: c3a96913-a13c-436a-8dc3-7e60326772a1
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: freedom.rzpserver.cloud
+  servername: biznet.rzpserver.cloud
   network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grcp
-  udp: true
-
-- name: Vmess-openorder-GRPC (SNI)
-  server: 104.18.225.52
-  port: 443
-  type: vmess
-  uuid: 84f5ed4b-9c56-4b42-88d0-5a984d6ff8cc
-  alterId: 0
-  cipher: auto
-  network: grpc
-  tls: true
-  servername: 5k30hari.baguno.my.id
-  skip-cert-verify: true
   grpc-opts:
     grpc-service-name: vmess-grpc
+  udp: true
 
 - name: MajiroSG3
   server: 104.18.225.52
