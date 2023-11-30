@@ -14,11 +14,11 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: Vmess
+- name: VmDesember
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: ddb00dad-f386-453a-8e92-afe2514544a8
+  uuid: 4bae27c7-f8a7-4802-b8fa-c3a181eacfa7
   alterId: 0
   cipher: auto
   tls: true
