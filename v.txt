@@ -14,7 +14,22 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: rzp
+- name: rzp sg
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 4d72ff83-9398-405e-9f77-4c0808d2faf2
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sgdo.rzpserver.cloud
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-service
+  udp: true
+
+- name: rzp biz
   server: 104.18.225.52
   type: vmess
   port: 443
