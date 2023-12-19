@@ -1,6 +1,6 @@
 proxies:
 - name: VmDesember
-  server: 104.18.225.52
+  server: 104.18.107.64
   type: vmess
   port: 443
   uuid: 4bae27c7-f8a7-4802-b8fa-c3a181eacfa7
@@ -15,7 +15,7 @@ proxies:
   udp: true
 
 - name: rzp sg
-  server: 104.18.225.52
+  server: zoomcares.zoom.us
   type: vmess
   port: 443
   uuid: 4d72ff83-9398-405e-9f77-4c0808d2faf2
@@ -30,7 +30,7 @@ proxies:
   udp: true
 
 - name: rzp biz
-  server: 104.18.225.52
+  server: cf.zoom.us
   type: vmess
   port: 443
   uuid: c3a96913-a13c-436a-8dc3-7e60326772a1
@@ -45,7 +45,7 @@ proxies:
   udp: true
 
 - name: MajiroSG3
-  server: 104.18.225.52
+  server: 104.17.3.81
   type: vmess
   port: 443
   uuid: dac3da8d-6860-485b-b159-5f08f3b6504a
