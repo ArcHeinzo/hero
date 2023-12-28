@@ -29,6 +29,21 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
+- name: rzp biz
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: c3a96913-a13c-436a-8dc3-7e60326772a1
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: biznet.rzpserver.cloud
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
 - name: MajiroSG3
   server: 104.18.225.52
   type: vmess
