@@ -20,87 +20,79 @@ proxy-providers:
   VPN:
     type: file
     path: "./acfa.yaml"
+    interval: 300
     health-check:
       enable: true
-      url: https://cp.cloudflare.com/generate_204
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 10
 proxy-groups:
-- name: Url
-  type: url-test
-  disable-udp: false
-  use:
+- name: Fallback
+  type: fallback 
+  strategy: sticky-sessions
+  use: 
   - VPN
-  url: http://www.gstatic.com/generate_204
-  interval: '100'
-- name: LB
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
-  - VPN
-  url: http://www.gstatic.com/generate_204
-  interval: '80'
-- name: LB2
-  type: load-balance
-  strategy: consistent-hashing
-  disable-udp: false
-  use:
-  - VPN
-  url: https://cp.cloudflare.com/generate_204
-  interval: '70'
+  # filter: BIZNET|Lord
 - name: Internet
-  type: url-test
-  disable-udp: false
-  proxies:
-  - LB
-  - Url
-  - LB2
-  url: http://www.gstatic.com/generate_204
-  interval: '9'
-  tolerance: '30'
-port: 7890
+  type: load-balance
+  strategy: sticky-sessions
+  use:
+  - VPN
+  # filter: BIZNET|Lord
+
+tproxy-port: 7895
+mixed-port: 7893
 socks-port: 7891
 redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
-ipv6: false
+port: 7890
 mode: rule
-log-level: silent
 allow-lan: true
-external-controller: 0.0.0.0:9090
-secret: ''
-bind-address: "*"
+log-level: silent
 unified-delay: true
+find-process-mode: strict
+geodata-loader: memconservative
+external-controller: 0.0.0.0:9090
+tcp-concurrent: true
+bind-address: "*"
+external-ui: "ui"
+ipv6: false
+secret:
+
 profile:
   store-selected: true
-  store-fakeip: true
   store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    TLS:
+      ports: [443, 8443]
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+
+tun:
+  enable: false
+  stack: system
+  dns-hijack:
+    - 'any:53'
+  auto-route: true
+  auto-detect-interface: true
+  
 dns:
   enable: true
-  ipv6: false
-  use-host: true
-  enhanced-mode: fake-ip
+  prefer-h3: true 
   listen: 0.0.0.0:7874
-  nameserver:
-  - 94.140.14.14
-  - 1.1.1.1
-  fallback:
-  - 94.140.14.14
-  - 1.1.1.1
   default-nameserver:
-  - 94.140.14.14
   - 1.1.1.1
+  - '114.122.110.253#REJECT'
+  enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-tun:
-  enable: true
-  stack: system
-  device: utun
-  auto-route: false
-  auto-detect-interface: false
-  dns-hijack:
-  - tcp://94.140.14.14:53
-  - tcp://1.1.1.1:53
+  use-hosts: true
+  nameserver:
+  - 1.1.1.1
+  - '114.122.110.253#REJECT'
+  - tls://1dot1dot1dot1.cloudflare-dns:853
+  - 'https://dns.cloudflare.com/dns-query#h3=true'
 rules:
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,Direct,DIRECT
+- AND,((NETWORK,UDP),(NOT,((DST-PORT,80/123/443/8000-8810/3478)))),Fallback
 - MATCH,Internet
