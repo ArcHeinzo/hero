@@ -94,5 +94,5 @@ dns:
   - tls://1dot1dot1dot1.cloudflare-dns:853
   - 'https://dns.cloudflare.com/dns-query#h3=true'
 rules:
-- AND,((NETWORK,UDP),(NOT,((DST-PORT,80/123/443/8000-8810/3478)))),Fallback
+- AND,((NETWORK,TCP),(NOT,((DST-PORT,80/123/443/8000-8810/3478)))),Fallback
 - MATCH,Internet
