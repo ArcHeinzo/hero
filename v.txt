@@ -1,4 +1,19 @@
 proxies:
+- name: Night gs
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 379c84b9-08be-4cf6-80b6-5cc3f0fd0408
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-sg01.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
 - name: VmNov
   server: 104.18.225.52
   type: vmess
@@ -9,6 +24,21 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: sg1.sanvpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
+- name: RZP
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: fb975fd7-3ee4-4f26-b9fe-fc4cf7ce47fb
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: b-on.rzpserver.cloud
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -28,33 +58,3 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
-
-- name: Night gs
-  server: 104.18.225.52
-  type: vmess
-  port: 443
-  uuid: 379c84b9-08be-4cf6-80b6-5cc3f0fd0408
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: vmess-sg01.globalssh.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-  udp: true
-
-- name: VLESS REALITY AthaMP
-  type: vless
-  server: 104.18.225.52
-  port: 2053
-  uuid: 5912ada5-bb0b-4018-96ab-b0778b828c39
-  network: tcp
-  tls: true
-  udp: true
-  flow: none
-  servername: amp.rzpserver.cloud
-  reality-opts:
-    public-key: yf8Dsj4xDyJPzdlyhPmk93iOGGIXr1jhuoIXsw7n3EM
-    short-id: cceb587c
-  client-fingerprint: chrome
