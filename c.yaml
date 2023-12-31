@@ -26,18 +26,11 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 10
 proxy-groups:
-- name: Fallback
-  type: fallback 
-  strategy: sticky-sessions
-  use: 
-  - VPN
-  # filter: BIZNET|Lord
 - name: Internet
   type: load-balance
   strategy: sticky-sessions
   use:
   - VPN
-  # filter: BIZNET|Lord
 
 tproxy-port: 7895
 mixed-port: 7893
@@ -94,5 +87,4 @@ dns:
   - tls://1dot1dot1dot1.cloudflare-dns:853
   - 'https://dns.cloudflare.com/dns-query#h3=true'
 rules:
-- AND,((NETWORK,TCP),(NOT,((DST-PORT,80/123/443/8000-8810/3478)))),Fallback
 - MATCH,Internet
