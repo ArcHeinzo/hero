@@ -1,19 +1,4 @@
 proxies:
-- name: Night gs
-  server: 104.18.225.52
-  type: vmess
-  port: 443
-  uuid: 379c84b9-08be-4cf6-80b6-5cc3f0fd0408
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: vmess-sg01.globalssh.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-  udp: true
-
 - name: VmNov
   server: 104.18.225.52
   type: vmess
@@ -24,6 +9,21 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: sg1.sanvpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
+- name: VmNov2
+  server: sg1.sanvpn.my.id
+  type: vmess
+  port: 443
+  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: 104.18.225.52
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -54,6 +54,21 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: vmess-ctb-sg03.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
+- name: Night gs
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 379c84b9-08be-4cf6-80b6-5cc3f0fd0408
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-sg01.globalssh.xyz
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
