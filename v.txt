@@ -43,3 +43,18 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
+
+- name: VLESS REALITY AthaMP
+  type: vless
+  server: 104.18.225.52
+  port: 2053
+  uuid: 5912ada5-bb0b-4018-96ab-b0778b828c39
+  network: tcp
+  tls: true
+  udp: true
+  flow: none
+  servername: amp.rzpserver.cloud
+  reality-opts:
+    public-key: yf8Dsj4xDyJPzdlyhPmk93iOGGIXr1jhuoIXsw7n3EM
+    short-id: cceb587c
+  client-fingerprint: chrome
