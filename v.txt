@@ -1,19 +1,4 @@
 proxies:
-- name: VmNov
-  server: 104.18.225.52
-  type: vmess
-  port: 443
-  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sg1.sanvpn.my.id
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-  udp: true
-
 - name: MajiroSG3
   server: 104.18.225.52
   type: vmess
@@ -29,16 +14,31 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: ctb us
+- name: Night gs
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: 18518e6b-f8c0-4369-bf0f-bbf52369c924
+  uuid: 379c84b9-08be-4cf6-80b6-5cc3f0fd0408
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: vmess-ctb-us01.globalssh.xyz
+  servername: vmess-sg01.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
+- name: VmNov
+  server: 104.18.225.52
+  type: vmess
+  port: 443
+  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg1.sanvpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
