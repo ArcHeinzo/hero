@@ -29,16 +29,16 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: rzp biz
+- name: ctb us
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: 379c84b9-08be-4cf6-80b6-5cc3f0fd0408
+  uuid: 18518e6b-f8c0-4369-bf0f-bbf52369c924
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: vmess-sggs.sg01.globalssh.xyz
+  servername: vmess-ctb-us01.globalssh.xyz
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
