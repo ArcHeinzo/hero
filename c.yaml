@@ -26,11 +26,40 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 10
 proxy-groups:
-- name: Internet
+- name: LB1
   type: load-balance
   strategy: sticky-sessions
+  disable-udp: false
   use:
   - VPN
+  url: https://cp.cloudflare.com/generate_204
+  interval: '70'
+- name: LB2
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - VPN
+  url: http://www.gstatic.com/generate_204
+  interval: '80'
+- name: LB3
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - VPN
+  url: https://cp.cloudflare.com/generate_204
+  interval: '90'
+- name: Internet
+  type: url-test
+  disable-udp: false
+  proxies:
+  - LB1
+  - LB2
+  - LB3
+  url: http://www.gstatic.com/generate_204
+  interval: '9'
+  tolerance: '30'
 
 tproxy-port: 7895
 mixed-port: 7893
