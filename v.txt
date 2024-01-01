@@ -1,21 +1,21 @@
 proxies:
-- name: VmNov
+- name: MajiroSG3
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
+  uuid: dac3da8d-6860-485b-b159-5f08f3b6504a
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sg1.sanvpn.my.id
+  servername: vmess-ctb-sg03.globalssh.xyz
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: VmSet
-  server: stream.visionplus.id
+- name: VmNov
+  server: 104.18.225.52
   type: vmess
   port: 443
   uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
@@ -39,21 +39,6 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: b-on.rzpserver.cloud
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-  udp: true
-
-- name: MajiroSG3
-  server: 104.18.225.52
-  type: vmess
-  port: 443
-  uuid: dac3da8d-6860-485b-b159-5f08f3b6504a
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: vmess-ctb-sg03.globalssh.xyz
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
