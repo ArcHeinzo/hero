@@ -44,6 +44,21 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
+- name: VmSet
+  server: 172.67.192.40
+  type: vmess
+  port: 443
+  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg1.sanvpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
 - name: Night gs
   server: 104.18.225.52
   type: vmess
