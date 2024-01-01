@@ -27,7 +27,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
-  udp: true
+  udp: false
 
 - name: VmNov3
   server: 172.64.199.18
@@ -42,25 +42,10 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
-  udp: true
+  udp: false
 
 - name: VmNov4
   server: 162.159.138.6
-  type: vmess
-  port: 443
-  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: sg1.sanvpn.my.id
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-  udp: true
-
-- name: VmNov5
-  server: 104.22.63.150
   type: vmess
   port: 443
   uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
