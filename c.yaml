@@ -24,12 +24,12 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 10
+      interval: 7
 proxy-groups:
 - name: LB1
   type: load-balance
   strategy: sticky-sessions
-  disable-udp: false
+  disable-udp: true
   use:
   - VPN
   url: https://cp.cloudflare.com/generate_204
@@ -37,7 +37,7 @@ proxy-groups:
 - name: LB2
   type: load-balance
   strategy: round-robin
-  disable-udp: false
+  disable-udp: true
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
@@ -113,7 +113,5 @@ dns:
   nameserver:
   - 1.1.1.1
   - '114.122.110.253#REJECT'
-  - tls://1dot1dot1dot1.cloudflare-dns:853
-  - 'https://dns.cloudflare.com/dns-query#h3=true'
 rules:
 - MATCH,Internet
