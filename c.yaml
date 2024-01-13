@@ -29,7 +29,7 @@ proxy-groups:
 - name: LB1
   type: load-balance
   strategy: sticky-sessions
-  disable-udp: true
+  disable-udp: false
   use:
   - VPN
   url: https://cp.cloudflare.com/generate_204
@@ -37,7 +37,7 @@ proxy-groups:
 - name: LB2
   type: load-balance
   strategy: round-robin
-  disable-udp: true
+  disable-udp: false
   use:
   - VPN
   url: http://www.gstatic.com/generate_204
@@ -106,12 +106,14 @@ dns:
   listen: 0.0.0.0:7874
   default-nameserver:
   - 1.1.1.1
+  - 8.8.4.4
   - '114.122.110.253#REJECT'
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
   - 1.1.1.1
+  - 8.8.4.4
   - '114.122.110.253#REJECT'
 rules:
 - MATCH,Internet
