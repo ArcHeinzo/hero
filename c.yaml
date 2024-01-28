@@ -32,6 +32,8 @@ proxy-groups:
   disable-udp: true
   use:
   - VPN
+  proxies:
+  - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '70'
 - name: LB2
@@ -40,6 +42,8 @@ proxy-groups:
   disable-udp: true
   use:
   - VPN
+  proxies:
+  - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '80'
 - name: LB3
@@ -48,6 +52,8 @@ proxy-groups:
   disable-udp: true
   use:
   - VPN
+  proxies:
+  - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '90'
 - name: Internet
