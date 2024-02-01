@@ -40,6 +40,8 @@ proxy-groups:
   disable-udp: true
   use:
   - VPN
+  proxies:
+  - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '80'
 - name: LB3
