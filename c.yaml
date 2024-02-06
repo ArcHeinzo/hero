@@ -108,12 +108,14 @@ dns:
   listen: 0.0.0.0:7874
   default-nameserver:
   - 1.1.1.1
+  - '202.152.254.230#REJECT'
   - '114.122.110.253#REJECT'
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
   - 1.1.1.1
+  - '202.152.254.230#REJECT'
   - '114.122.110.253#REJECT'
 rules:
 - MATCH,Internet
