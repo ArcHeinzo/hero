@@ -31,11 +31,11 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: Do
+- name: Do 0315
   server: 104.18.225.52
   type: vmess
   port: 443
-  uuid: d729605c-33de-49a3-8097-c3418a012235
+  uuid: ed9dad9c-9e1d-474c-9880-abd514eda74d
   alterId: 0
   cipher: auto
   tls: true
