@@ -13,7 +13,7 @@ proxies:
   ws-opts:
     path: /vmess
     headers:
-      Host: sg2.sanvpn.my.id
+      Host: sg1.sanvpn.my.id
   udp: true
 
 - name: grcp
