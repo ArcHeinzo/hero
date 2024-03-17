@@ -1,6 +1,6 @@
 proxies:
 - name: grcp
-  server: 104.18.225.52
+  server: 104.22.5.240
   type: vmess
   port: 443
   uuid: 6b859d34-2a65-44dc-ae14-ee2592b4619c
@@ -14,16 +14,16 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: Do 0315
-  server: 104.18.225.52
+- name: grcp2
+  server: 104.22.4.240
   type: vmess
   port: 443
-  uuid: ed9dad9c-9e1d-474c-9880-abd514eda74d
+  uuid: 6b859d34-2a65-44dc-ae14-ee2592b4619c
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: do.madewgn.eu.org
+  servername: sg1.sanvpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
