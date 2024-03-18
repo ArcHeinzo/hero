@@ -1,6 +1,6 @@
 proxies:
 - name: grcp
-  server: img.email3.vidio.com
+  server: quiz.int.vidio.com
   type: vmess
   port: 443
   uuid: 6b859d34-2a65-44dc-ae14-ee2592b4619c
