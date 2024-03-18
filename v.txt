@@ -13,3 +13,19 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
   udp: true
+
+- name: grcp2
+  server: 104.16.13.120
+  type: vmess
+  port: 443
+  uuid: 6b859d34-2a65-44dc-ae14-ee2592b4619c
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg1.sanvpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
