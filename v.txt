@@ -1,5 +1,5 @@
 proxies:
-- name: 1
+- name: grcp
   server: quiz.int.vidio.com
   type: vmess
   port: 443
@@ -14,7 +14,7 @@ proxies:
     grpc-service-name: vmess-grpc
   udp: true
 
-- name: 2
+- name: grpc
   server: img.email3.vidio.com
   type: vmess
   port: 443
