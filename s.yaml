@@ -1,0 +1,121 @@
+rule-providers:
+  Ping-Url:
+    type: http
+    behavior: classical
+    url: "https://clients3.google.com"
+    path: ./ping.yaml
+    interval: '1'
+  X:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/v.txt"
+    path: ./acfa.yaml
+    interval: '3663'
+  Direct:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ArcHeinzo/hero/main/d.txt"
+    path: "./direct.yaml"
+proxy-providers:
+  VPN:
+    type: file
+    path: "./acfa.yaml"
+    interval: 300
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 7
+proxy-groups:
+- name: LB1
+  type: load-balance
+  strategy: sticky-sessions
+  disable-udp: true
+  use:
+  - VPN
+  url: https://cp.cloudflare.com/generate_204
+  interval: '70'
+- name: LB2
+  type: load-balance
+  strategy: round-robin
+  disable-udp: true
+  use:
+  - VPN
+  url: http://www.gstatic.com/generate_204
+  interval: '80'
+- name: LB3
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: true
+  use:
+  - VPN
+  proxies:
+  - DIRECT
+  url: https://cp.cloudflare.com/generate_204
+  interval: '90'
+- name: Internet
+  type: url-test
+  disable-udp: true
+  proxies:
+  - LB1
+  - LB2
+  - LB3
+  url: http://www.gstatic.com/generate_204
+  interval: '9'
+  tolerance: '30'
+
+tproxy-port: 7895
+mixed-port: 7071
+socks-port: 7891
+redir-port: 7892
+port: 7890
+mode: rule
+allow-lan: true
+log-level: silent
+unified-delay: true
+find-process-mode: strict
+geodata-loader: memconservative
+external-controller: 0.0.0.0:9090
+tcp-concurrent: true
+bind-address: "*"
+external-ui: "ui"
+ipv6: false
+secret:
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    TLS:
+      ports: [443, 8443]
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+
+tun:
+  enable: false
+  stack: system
+  dns-hijack:
+    - 'any:53'
+  auto-route: true
+  auto-detect-interface: true
+  
+dns:
+  enable: true
+  prefer-h3: true 
+  listen: 0.0.0.0:7874
+  default-nameserver:
+  - 1.1.1.1
+  - '202.152.254.230#REJECT'
+  - '114.122.110.253#REJECT'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+  - 1.1.1.1
+  - '202.152.254.230#REJECT'
+  - '114.122.110.253#REJECT'
+rules:
+- MATCH,Internet
