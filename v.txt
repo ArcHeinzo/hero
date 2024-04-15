@@ -1,4 +1,19 @@
 proxies:
+- name: Night1
+  server: quiz.int.vidio.com
+  type: vmess
+  port: 443
+  uuid: 9ccd76a1-85a5-49c8-a7c8-432026604b03
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-sis-jp01.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
 - name: Night
   server: quiz.int.vidio.com
   type: vmess
