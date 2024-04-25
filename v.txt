@@ -3,12 +3,12 @@ proxies:
   server: quiz.int.vidio.com
   type: vmess
   port: 443
-  uuid: 80407e0e-6ac9-460b-9550-608771585ef4
+  uuid: 6d968b00-f208-4711-8de3-90d8ca76e473
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: vmess-sis-jp01.globalssh.xyz
+  servername: vmess-ovh-ca01.globalssh.xyz
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -18,12 +18,12 @@ proxies:
   server: quiz.int.vidio.com
   type: vmess
   port: 443
-  uuid: 80407e0e-6ac9-460b-9550-608771585ef4
+  uuid: 6d968b00-f208-4711-8de3-90d8ca76e473
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: vmess-sis-jp01.globalssh.xyz
+  servername: vmess-ovh-ca01.globalssh.xyz
   network: ws
   ws-opts:
     path: /vmess-ws
