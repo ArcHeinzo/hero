@@ -25,7 +25,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sg1.sanvpn.my.id
+  servername: sgp1.sanvpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -40,7 +40,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sg1.sanvpn.my.id
+  servername: sgp1.sanvpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
