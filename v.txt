@@ -9,11 +9,9 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: vmess-sis-jp01.globalssh.xyz
-  network: ws
-  ws-opts:
-    path: /vmess-ws
-    headers:
-      Host: vmess-sis-jp01.globalssh.xyz
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
   udp: true
 
 - name: grcp
