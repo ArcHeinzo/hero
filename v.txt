@@ -12,17 +12,18 @@ proxies:
   skip-cert-verify: true
   grpc-opts:
     grpc-service-name: vmess-grpc
+  udp: true
 
 - name: grcp
   server: quiz.int.vidio.com
   type: vmess
   port: 443
-  uuid: 6b859d34-2a65-44dc-ae14-ee2592b4619c
+  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sgp1.sanvpn.my.id
+  servername: sg1.sanvpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -32,12 +33,12 @@ proxies:
   server: img.email3.vidio.com
   type: vmess
   port: 443
-  uuid: 6b859d34-2a65-44dc-ae14-ee2592b4619c
+  uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: sgp1.sanvpn.my.id
+  servername: sg1.sanvpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
