@@ -1,4 +1,19 @@
 proxies:
+- name: grts
+  server: quiz.int.vidio.com
+  type: vmess
+  port: 443
+  uuid: 7fd656ee-0626-4f6f-ae71-4b340609184a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sedekah-akun.kakaonet.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+  udp: true
+
 - name: grcp
   server: quiz.int.vidio.com
   type: vmess
