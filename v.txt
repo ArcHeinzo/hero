@@ -1,18 +1,17 @@
 proxies:
 - name: Night
   server: quiz.int.vidio.com
-  type: vmess
   port: 443
-  uuid: 870c92f6-1851-473a-be26-2699427db5c7
+  type: vmess
+  uuid: 7fd656ee-0626-4f6f-ae71-4b340609184a
   alterId: 0
   cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: vmess-sis-jp01.globalssh.xyz
   network: grpc
+  tls: true
+  servername: sedekah-akun.kakaonet.my.id
+  skip-cert-verify: true
   grpc-opts:
     grpc-service-name: vmess-grpc
-  udp: true
 
 - name: grcp
   server: quiz.int.vidio.com
