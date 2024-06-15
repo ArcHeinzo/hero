@@ -30,9 +30,9 @@ proxies:
   udp: true
 
 - name: grpc
-  server: img.email3.vidio.com
+  server: quiz.int.vidio.com
   type: vmess
-  port: 443
+  port: 80
   uuid: 96324fc8-d664-4e37-b2a8-4e59c355d8c5
   alterId: 0
   cipher: auto
